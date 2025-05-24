@@ -1,0 +1,250 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  height: 100vh;
+  background: #f4f5f7;
+}
+.sidebar {
+  width: 250px;
+  height: 100%;
+  background: #11182b;
+  color: white;
+  transition: width 0.3s;
+  overflow: hidden;
+  padding-top: 20px;
+}
+.sidebar.closed {
+  width: 70px;
+}
+.sidebar .profile {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+}
+.profile img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.profile-info {
+  display: block;
+  transition: opacity 0.3s;
+}
+.closed .profile-info {
+  opacity: 0;
+}
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.menu li {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.menu li:hover {
+  background: #2d3b55;
+}
+.menu i {
+  margin-right: 15px;
+}
+.menu span {
+  transition: opacity 0.3s;
+}
+.closed .menu span {
+  opacity: 0;
+}
+.toggle-btn {
+  position: absolute;
+  top: 20px;
+  margin-top: 545px;
+  right: 20; /* Sidebar ke bilkul chipka diya */
+  margin-left: 18px;
+  background: #ffffff;
+  color: rgb(30, 52, 80);
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 20px;
+  transition: transform 0.3s;
+}
+
+.sidebar.closed .toggle-btn {
+  transform: rotate(180deg);
+}
+.sidebar.closed .profile-info {
+  opacity: 1;
+}
+.sidebar.closed .profile img {
+  margin: 20 auto;
+  display: block;
+}
+
+#card {
+  width: 55%;
+  height: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-left: 200px;
+  margin-top: 10px;
+}
+#card #card {
+  width: 320px;
+  height: 270px;
+  background: #07182e;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 30px;
+}
+#card #card::before {
+  content: "";
+  position: absolute;
+  width: 800px;
+  background-image: linear-gradient(90deg, rgb(0, 183, 255), rgb(255, 48, 255));
+  height: 100px;
+  animation: animate 5s linear infinite;
+  transition: all 0.2s linear;
+}
+@keyframes animate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+#card #card::after {
+  content: "";
+  position: absolute;
+  background: #0a1f3b;
+  inset: 6px;
+  border-radius: 8px;
+}
+#card #card #content {
+  padding: 10px;
+  z-index: 999;
+}
+#card #card #content h1 {
+  color: rgb(0, 183, 255);
+  margin-bottom: 8px;
+}
+#card #card #content h3 {
+  color: #b856ff;
+  border-bottom: 1px solid #b956ff93;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+}
+#card #card #content p {
+  max-width: 150px;
+  /* color: #f0f0f3ba; */
+  color: rgb(0, 183, 255);
+  margin-top: 15px;
+  font-size: 16px;
+}
+
+.active-btn {
+  background: linear-gradient(135deg, #1db954, #1ed760);
+  color: white;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 8px 30px;
+  margin-left: 10px;
+  margin-top: 30px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0px 4px 15px rgba(30, 215, 96, 0.5);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.active-btn:hover {
+  background: linear-gradient(135deg, #1ed760, #2ee679);
+  box-shadow: 0px 6px 25px rgba(30, 215, 96, 0.7);
+  transform: scale(1.05);
+}
+
+.active-btn:active {
+  transform: scale(0.95);
+  transition: transform 0.1s ease-in-out;
+}
+
+.glow {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.3) 10%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.active-btn:hover .glow {
+  opacity: 1;
+}
+
+.inactive-btn {
+  background: linear-gradient(135deg, #ff4b4b, #ff6b6b);
+  color: white;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 8px 30px;
+  margin-left: 20px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0px 4px 15px rgba(255, 75, 75, 0.5);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.inactive-btn:hover {
+  background: linear-gradient(135deg, #ff6b6b, #ff8787);
+  box-shadow: 0px 6px 25px rgba(255, 75, 75, 0.7);
+  transform: scale(1.05);
+}
+
+.inactive-btn:active {
+  transform: scale(0.95);
+  transition: transform 0.1s ease-in-out;
+}
+
+.glow {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.3) 10%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.inactive-btn:hover .glow {
+  opacity: 1;
+}

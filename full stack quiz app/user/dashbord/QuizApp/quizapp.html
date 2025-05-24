@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="./quizapp.css" />
+    <link rel="shortcut icon" href="../../../Capture.PNG" type="image/x-icon" />
+  </head>
+  <body>
+    <div id="quizContainer">
+      <div id="mainBox">
+        <h1 class="heading">Quiz</h1>
+
+        <div id="timerBox">
+          <h3 id="time">
+            time:
+            <span id="Min">2:</span>
+            <span id="Sec">00</span>
+          </h3>
+        </div>
+      </div>
+
+      <div class="line"></div>
+
+      <div class="start-quiz">
+        <h1 id="questionElement"></h1>
+      </div>
+
+      <div id="optionElement">
+        <ul id="allLi"></ul>
+      </div>
+
+      <div id="pages-number">
+        <p>
+          <span id="currentQuesCount">1</span>/<span id="totalCount">10</span>
+        </p>
+      </div>
+
+      <div class="next">
+        <button onclick="nextbutton()" id="nextbtn" disabled>Next</button>
+      </div>
+    </div>
+
+    <div id="resultContainer">
+      <ul id="scores">
+        <li>Quiz Name :</li>
+        <li>Total Questions :</li>
+        <li>Correct Answer :</li>
+        <li>Wrong Answer :</li>
+        <li>persentage :</li>
+      </ul>
+    </div>
+    <script type="module" src="./quizapp.js"></script>
+  </body>
+</html>

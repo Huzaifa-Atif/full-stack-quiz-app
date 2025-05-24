@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Quiz</title>
+    <link rel="shortcut icon" href="../../Capture.PNG" type="image/x-icon" />
+    <link rel="stylesheet" href="createQuiz.css" />
+  </head>
+  <body>
+    <!-- navbar start -->
+    <nav class="navbar">
+      <div class="logo">Quiz App</div>
+      <ul>
+        <li><a href="../createQuiz/createQuiz.html">Create Quiz</a></li>
+        <li><a href="../QuizListing/listing.html">Quiz Listing</a></li>
+        <li><a href="../../index.html">login Out</a></li>
+        <li><a href="../dashbord/dashboard.html" class="active">Home</a></li>
+      </ul>
+    </nav>
+    <!-- navbar end -->
+
+    <div class="container">
+      <div class="form">
+        <h2>Create Quiz</h2>
+
+        <div class="input-space">
+          <input class="QuizTittle" type="text" required />
+          <label>Enter your title</label>
+        </div>
+
+        <div class="input-space">
+          <input class="QuizCategory" type="text" required />
+          <label>Enter your category</label>
+        </div>
+
+        <div class="input-space">
+          <input id="QuestionText" type="text" required />
+          <label>Enter your question</label>
+        </div>
+
+        <div class="input-space">
+          <input id="option1" type="text" required />
+          <label>Option 1</label>
+        </div>
+
+        <div class="input-space">
+          <input id="option2" type="text" required />
+          <label>Option 2</label>
+        </div>
+
+        <div class="input-space">
+          <input id="option3" type="text" required />
+          <label>Option 3</label>
+        </div>
+
+        <div class="input-space">
+          <input id="option4" type="text" required />
+          <label>Option 4</label>
+        </div>
+
+        <div class="input-space">
+          <input id="CorrectAns" type="text" required />
+          <label>enter your correct answer</label>
+        </div>
+
+        <button onclick="AddQuestionsHandler()">add Quiz</button>
+        <br />
+        <button class="add" onclick="CreateQuizHandler()">Create Quiz</button>
+      </div>
+    </div>
+    <script type="module" src="createQuiz.js"></script>
+  </body>
+</html>

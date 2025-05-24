@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin dashboard</title>
+    <link rel="stylesheet" href="dashboard.css" />
+    <link rel="shortcut icon" href="../../Capture.PNG" type="image/x-icon" />
+  </head>
+  <body onload="Authcheck()">
+    <!-- navbar start -->
+    <nav class="navbar">
+      <div class="logo">Quiz App</div>
+      <ul>
+        <li><a href="../createQuiz/createQuiz.html">Create Quiz</a></li>
+        <li><a href="../QuizListing/listing.html">Quiz Listing</a></li>
+        <li><a href="../../index.html">login Out</a></li>
+        <li><a href="../dashbord/dashboard.html" class="active">Home</a></li>
+      </ul>
+    </nav>
+    <!-- navbar end -->
+    <!-- Keep your existing head and navbar as is -->
+
+    <div class="dashboard">
+      <h1>Welcome Admin 👋</h1>
+
+      <div class="stats">
+        <div class="card">
+          <h2>Total Quizzes</h2>
+          <p id="quiz-count">0</p>
+        </div>
+        <div class="card">
+          <h2>Users</h2>
+          <p id="user-count">0</p>
+        </div>
+        <div
+          class="card quick-action"
+          onclick="window.location.href='../createQuiz/createQuiz.html'"
+        >
+          <h2>Create New Quiz ➕</h2>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script type="module" src="dashboard.js"></script>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="./Capture.PNG" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="form">
+        <h2>Login</h2>
+        <div class="input-space">
+          <input placeholder="Enter your Email" id="email" type="email" />
+        </div>
+        <div class="input-space">
+          <input
+            placeholder="Enter your Password"
+            id="password"
+            type="password"
+          />
+        </div>
+        <div class="remember-forgot">
+          <label for="remember me">
+            <input type="checkbox" id="remember me" />
+            <p>Remember me</p>
+          </label>
+        </div>
+        <button onclick="loginHandler()">Login</button>
+        <div class="register">
+          <p>
+            Don't have an account?
+            <a href="./auth/signup/signup.html">Sign Up</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="./auth/signup/login/login.js"></script>
+  </body>
+</html>
